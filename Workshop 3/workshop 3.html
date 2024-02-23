@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venta de Teléfono</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    background-color: #fbf3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Asegurar que la posición absoluta se aplique correctamente */
+  }
+  .phone-description {
+    flex: 1;
+    padding: 20px;
+  }
+  .phone-description h2 {
+    color: #060606;
+  }
+  .phone-image {
+    flex: 1;
+    position: relative; /* Asegurar que la posición absoluta se aplique correctamente */
+  }
+  .advantages {
+    background-color: #66ccff;
+    color: #000000;
+    padding: 20px;
+  }
+  .advantages h2 {
+    color: #010101;
+  }
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/fondo 1.jpg');
+    background-size: cover; /* Para cubrir todo el contenedor */
+    background-position: center; /* Para centrar la imagen */
+    z-index: -2; /* Para enviar el fondo al fondo */
+
+  }
+  .container {
+    position: relative;
+    z-index: 2; /* Para asegurar que el contenido esté sobre el fondo */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Color celeste con opacidad */
+    color: #000000; /* Color de las letras */
+  }
+  .buy-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .buy-form {
+    margin-top: 20px;
+  }
+  .overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Para que esté sobre la imagen principal */
+  }
+</style>
+</head>
+<body>
+    <div class="background"></div> <!-- Capa para el fondo -->
+
+
+<div class="container">
+  <div class="phone-description">
+    <h2>iPhone 20 RL</h2>
+    <p>El iPhone 20 RL es el primer iPhone diseñado con titanio de calidad aeroespacial, la misma aleación que se usa en las naves espaciales enviadas a Marte.</p>
+    <button class="buy-button" onclick="showBuyForm()">Comprar</button>
+    <div id="buyForm" class="buy-form" style="display: none;">
+      <h2>Complete el formulario para comprar</h2>
+      <form>
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="card">Número de Tarjeta:</label><br>
+        <input type="text" id="card" name="card" required><br>
+        <label for="expiry">Fecha de Vencimiento:</label><br>
+        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required><br>
+        <label for="cvv">CVV:</label><br>
+        <input type="text" id="cvv" name="cvv" required><br><br>
+        <input type="submit" value="Comprar">
+      </form>
+    </div>
+    <script>
+      function showBuyForm() {
+        document.getElementById('buyForm').style.display = 'block';
+      }
+    </script>
+  </div>
+  <div class="phone-image">
+    <img src="image/iphone.png" alt="phone-image">
+    <div class="overlay-image">
+      <img src="image/iphone 2.png">
+    </div>
+  </div>
+</div>
+
+<div class="advantages">
+  <h2>--------------------------------------------------------------------------------------------------------------------------------------------------------</h2>
+  <ul>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #087e62;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ventajas del iPhone 20 RL</h2>
+    <table>
+        <tr>
+            <th>Ventaja</th>
+            <th>Porcentaje de duración</th>
+            <th>Precio</th>
+        </tr>
+        <tr>
+            <td>Pantalla dividida para multitarea</td>
+            <td>75%</td>
+            <td>$800</td>
+        </tr>
+        <tr>
+            <td>Mayor productividad</td>
+            <td>80%</td>
+            <td>$900</td>
+        </tr>
+        <tr>
+            <td>Mejora en la experiencia de juegos</td>
+            <td>70%</td>
+            <td>$850</td>
+        </tr>
+        <tr>
+            <td>Chip A17 Pro.
+                La bestia del gaming.</td>
+            <td>96%</td>
+            <td>$950</td>
+        </tr>
+        <tr>
+            <td>cámara gran angular de 58 MP</td>
+            <td>87%</td>
+            <td>$920</td>
+        </tr>
+        <tr>
+            <td>170 mm de zoom.
+                Pro nivel Max.</td>
+            <td>90%</td>
+            <td>$980</td>
+        </tr>
+    </table>
+<h2>---------------------------------------------------------------------------------------------------------------------------------------------------</h2>
+</body>
+</html>
+
+  </ul>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venta de Teléfono</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    background-color: #fbf3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Asegurar que la posición absoluta se aplique correctamente */
+  }
+  .phone-description {
+    flex: 1;
+    padding: 20px;
+  }
+  .phone-description h2 {
+    color: #060606;
+  }
+  .phone-image {
+    flex: 1;
+    position: relative; /* Asegurar que la posición absoluta se aplique correctamente */
+  }
+  .advantages {
+    background-color: #66ccff;
+    color: #000000;
+    padding: 20px;
+  }
+  .advantages h2 {
+    color: #010101;
+  }
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/fondo 1.jpg');
+    background-size: cover; /* Para cubrir todo el contenedor */
+    background-position: center; /* Para centrar la imagen */
+    z-index: -2; /* Para enviar el fondo al fondo */
+
+  }
+  .container {
+    position: relative;
+    z-index: 2; /* Para asegurar que el contenido esté sobre el fondo */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Color celeste con opacidad */
+    color: #000000; /* Color de las letras */
+  }
+  .buy-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .buy-form {
+    margin-top: 20px;
+  }
+  .overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Para que esté sobre la imagen principal */
+  }
+</style>
+</head>
+<body>
+    <div class="background"></div> <!-- Capa para el fondo -->
+
+
+<div class="container">
+  <div class="phone-description">
+    <h2>Descripción iPhone 20 RL</h2>
+    <h2>Acabado</h2>
+    <p>- Color oro</p>
+    <p>- gris espacial</p>
+    <p>- color plata</p>
+<h2>Capacidad</h2>
+    <p>* 64 GB
+    </p> * 256 GB</p>
+    </p>* 512 GB</p>
+        <h2>Tamaño y peso</h2>
+    </p>*Ancho: 70.9 mm</p>
+    </p>*Alto: 143.6 mm</p>
+    </p>*Grosor: 7.7 mm</p>
+    </p>*Peso: 177 g</p>
+
+    <h2>Pantalla</h2>
+</p>* Pantalla Super Retina HD</p>
+</p>* Pantalla OLED Multi-Touch de 5.8 pulgadas (diagonal) sin marco</p>
+</p>* Pantalla HDR</p>
+</p>* Resolución de 2436 x 1125 pixeles a 458 ppi</p>
+</p>* Relación de contraste 1,000,000:1 (normal)</p>
+</p>* Pantalla True Tone</p>
+</p>* Amplia gama de colores (P3)</p>
+</p>* 3D Touch</p>
+</p>* Brillo máximo de 625 cd/m2 (normal)</p>
+</p>* Revestimiento oleofóbico resistente a huellas dactilares</p>
+</p>* Compatibilidad para mostrar varios idiomas y caracteres simultáneamente</p>
+
+<h2>La pantalla del iPhone XS tiene esquinas redondeadas que siguen el elegante diseño curvo del teléfono, y las esquinas se encuentran dentro de un rectángulo estándar. Si se mide en forma de un rectángulo estándar, la pantalla tiene 5.85 pulgadas en diagonal (el área real de visualización es menor).</h2>
+
+    </script>
+  </div>
+  <div class="phone-image">
+    <img src="image/iphone.png" alt="phone-image">
+    <div class="overlay-image">
+      <img src="image/iphone 3.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="advantages">
+  <h2></h2>
+  <ul>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #087e62;
+        }
+    </style>
+</head>
+<body>
+    <h2>MATUS COMPANY HIGH TECHNOLOGY PHONES IN THE WORLD</h2>
+  
+</body>
+</html>
+
+  </ul>
+</div>
+
+</body>
+</html>
+
