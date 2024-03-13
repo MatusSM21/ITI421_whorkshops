@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guardar Datos de Cliente</title>
+<link rel="stylesheet" href="client_data.css">
+</head>
+<body>
+  <h2>Datos del Cliente</h2>
+  <form id="clienteForm">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" required>
+    </div>
+    
+    <button type="button" onclick="guardarCliente()">Guardar</button>
+  </form>
+
+  <h2>Tabla de registros de clientes</h2>
+  <table id="tablaClientes">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Teléfono</th>
+      </tr>
+    </thead>
+    <tbody id="tbodyClientes">
+    </tbody>
+  </table>
+
+  <script>
+    function guardarCliente() {
+      var nombre = document.getElementById("nombre").value;
+      var apellido = document.getElementById("apellido").value;
+      var telefono = document.getElementById("telefono").value;
+
+      var cliente = {
+        nombre: nombre,
+        apellido: apellido,
+        telefono: telefono
+      };
+
+      var clientes = JSON.parse(localStorage.getItem("clientes")) || [];
+
+      clientes.push(cliente);
+
+      localStorage.setItem("clientes", JSON.stringify(clientes));
+
+      document.getElementById("clienteForm").reset();
+
+      mostrarClientes();
+      alert("Datos del cliente guardados");
+    }
+
+    function mostrarClientes() {
+      var clientes = JSON.parse(localStorage.getItem("clientes")) || [];
+      var tbodyClientes = document.getElementById("tbodyClientes");
+      tbodyClientes.innerHTML = '';
+
+      clientes.forEach(function(cliente, index) {
+        var fila = document.createElement("tr");
+
+        var celdaNombre = document.createElement("td");
+        celdaNombre.textContent = cliente.nombre;
+        fila.appendChild(celdaNombre);
+
+        var celdaApellido = document.createElement("td");
+        celdaApellido.textContent = cliente.apellido;
+        fila.appendChild(celdaApellido);
+
+        var celdaTelefono = document.createElement("td");
+        celdaTelefono.textContent = cliente.telefono;
+        fila.appendChild(celdaTelefono);
+
+        var celdaAcciones = document.createElement("td");
+        var botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "Eliminar";
+        botonEliminar.onclick = function() {
+          eliminarCliente(index);
+        };
+        celdaAcciones.appendChild(botonEliminar);
+        fila.appendChild(celdaAcciones);
+
+        tbodyClientes.appendChild(fila);
+      });
+    }
+
+    function eliminarCliente(index) {
+      var clientes = JSON.parse(localStorage.getItem("clientes")) || [];
+      clientes.splice(index, 1); 
+      localStorage.setItem("clientes", JSON.stringify(clientes)); 
+      mostrarClientes(); 
+      alert("Datos del cliente eliminados");
+    }
+
+    mostrarClientes();
+  </script>
+</body>
+</html>
