@@ -32,11 +32,11 @@ body {
   }
   
   tr:nth-child(even) {
-    background-color: #c2f72e;
+    background-color: #000000;
   }
   
   tr:hover {
-    background-color: #777;
+    background-color: #090909;
   }
   
   button {

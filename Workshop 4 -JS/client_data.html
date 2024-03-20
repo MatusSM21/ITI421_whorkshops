@@ -41,6 +41,7 @@
   </table>
 
   <script>
+    // Función para guardar un cliente en el almacenamiento local
     function guardarCliente() {
       var nombre = document.getElementById("nombre").value;
       var apellido = document.getElementById("apellido").value;
@@ -64,6 +65,7 @@
       alert("Datos del cliente guardados");
     }
 
+    // Función para mostrar todos los clientes almacenados
     function mostrarClientes() {
       var clientes = JSON.parse(localStorage.getItem("clientes")) || [];
       var tbodyClientes = document.getElementById("tbodyClientes");
@@ -97,6 +99,7 @@
       });
     }
 
+    // Función para eliminar un cliente
     function eliminarCliente(index) {
       var clientes = JSON.parse(localStorage.getItem("clientes")) || [];
       clientes.splice(index, 1); 
@@ -105,6 +108,7 @@
       alert("Datos del cliente eliminados");
     }
 
+    // Al cargar la página, se muestran los clientes almacenados
     mostrarClientes();
   </script>
 </body>
